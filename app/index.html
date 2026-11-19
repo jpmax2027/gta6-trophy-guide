@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Got a Price! — GTA VI Trophy Guide &amp; Platinum Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: checklist, roadmap to the platinum, and missable warnings.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="skyline" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-cup" id="brand-cup"></span>
+    <div class="brand-text">
+      <h1>Vice Got a Price!</h1>
+      <p class="tagline">GTA VI Trophy Guide &amp; Platinum Tracker — all 55 PS5 trophies, fully offline</p>
+    </div>
+  </div>
+  <section class="progress-panel" aria-label="Your progress">
+    <div class="progress-numbers">
+      <div class="stat">
+        <span class="stat-value" id="stat-percent">0%</span>
+        <span class="stat-label">complete</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-earned">0 / 55</span>
+        <span class="stat-label">trophies earned</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-points">0</span>
+        <span class="stat-label">trophy points</span>
+      </div>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-label="Completion" id="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <ul class="grade-counts" id="grade-counts"></ul>
+    <div class="progress-actions">
+      <button type="button" id="btn-export">Export progress</button>
+      <label class="import-label" for="import-file">Import progress</label>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" id="btn-reset">Reset</button>
+    </div>
+  </section>
+</header>
+<nav class="view-tabs" aria-label="Views">
+  <a href="#/" data-route="checklist" class="tab">Checklist</a>
+  <a href="#/roadmap" data-route="roadmap" class="tab">Roadmap</a>
+  <a href="#/missables" data-route="missables" class="tab">Missables</a>
+</nav>
+<section class="toolbar" id="toolbar" aria-label="Filters">
+  <input type="search" id="filter-search" placeholder="Search trophies by name or description…" aria-label="Search trophies">
+  <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+  <div class="selects">
+    <label>Grade
+      <select id="filter-grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>State
+      <select id="filter-state">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="unearned">Not earned</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="filter-sort">
+        <option value="official">Official order</option>
+        <option value="grade">Grade</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle">
+      <input type="checkbox" id="toggle-spoiler">
+      Spoiler protection
+    </label>
+  </div>
+  <p class="result-count" id="result-count"></p>
+</section>
+<main>
+  <section id="view-checklist" class="view">
+    <ul class="trophy-list" id="trophy-list"></ul>
+    <p class="empty-note" id="empty-note" hidden>No trophies match the current filters.</p>
+  </section>
+  <section id="view-roadmap" class="view" hidden>
+    <div class="roadmap-intro">
+      <h2>Roadmap to the Platinum</h2>
+      <p>One clean run, in order: finish the story while its missions are in front of you, mop up stranger strands, then activities, collectibles and exploration, then the crime and money trophies, and let 100% completion hand you the platinum. Stages below follow the official trophy descriptions; missable trophies are flagged inside their stage.</p>
+    </div>
+    <div id="roadmap-stages"></div>
+  </section>
+  <section id="view-missables" class="view" hidden>
+    <div class="roadmap-intro">
+      <h2>Missable Trophies</h2>
+      <p>Only four trophies are flagged missable, and only because their official descriptions imply a one-time choice or event. The flag is an inference from the description text — story missions can be replayed from the pause menu (per the cited guides), so no chapter trophy is flagged. Read these before the moments pass.</p>
+    </div>
+    <ul class="trophy-list" id="missable-list"></ul>
+  </section>
+</main>
+<aside class="detail-panel" id="detail-panel" hidden aria-label="Trophy detail">
+  <button type="button" class="detail-close" id="detail-close">Close ✕</button>
+  <div id="detail-body"></div>
+</aside>
+<div class="detail-scrim" id="detail-scrim" hidden></div>
+<footer class="site-footer">
+  <p>Unofficial fan guide. Trophy names and descriptions are the official PlayStation trophy list for Grand Theft Auto VI (PS5). All guide text is original to this app; sources are linked inside each trophy. Works offline — progress is stored only in your browser.</p>
+</footer>
+<script src="js/store.js"></script>
+<script src="js/render.js"></script>
+<script src="js/roadmap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
